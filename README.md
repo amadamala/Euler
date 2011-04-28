@@ -1,1 +1,1 @@
-In future I will add the solutions to the problems at euler.net.
+	In future I will add solutions to some problems at projecteuler.net.
