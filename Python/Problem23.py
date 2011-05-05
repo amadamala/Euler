@@ -21,12 +21,7 @@ def main():
 	for i in range(12, UPPER_LIMIT+1):
 		if isAbundant(i):
 			abundants.append(i)
-			if i%2 == 1:
-				print i, "odd number"
-	# print abundants		
+		print abundants		
 	
 if __name__ == "__main__":
     main()
-
-if n%2 == 1:
-	print "odd number"
