@@ -7,21 +7,24 @@ is the 938th name in the list. So, COLIN would obtain a score of 938  53 = 49714
 What is the total of all the name scores in the file?
 """
 
-""" open file and read file"""
+""" open file and read file """
 BASE = 64 			# subtracting BASE from Ascii of char gives its position
-f = open('names.txt', 'r+')
+f = open('names.txt', 'r')
 input = f.read()
 
 def total_name_score():
-	s = input.replace('"','').split(',')
-	s.sort()
+	words = input.replace('"','').split(',')
+	words.sort()
 	
 	sum = 0
-	for pos in range(1, len(s)+1)
+	for pos in range(1, len(words) + 1):
 		s = 0;
 		# find the sum of characters order
-		for j in list(item):
+		for j in list(words[pos - 1]):
 			s = s + ord(j) - BASE
+			
 		sum = sum + (s * pos)
+	
 	print sum	
-total_name_score()		
+	
+total_name_score()
