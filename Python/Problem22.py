@@ -18,11 +18,10 @@ def total_name_score():
 	
 	sum = 0
 	for pos in range(1, len(words) + 1):
-		s = 0;
+		s = 0
 		# find the sum of characters order
-		for j in list(words[pos - 1]):
-			s = s + ord(j) - BASE
-			
+		for j in list(words[pos - 1]): 
+			s = s + ( ord(j) - BASE )
 		sum = sum + (s * pos)
 	
 	print sum	
