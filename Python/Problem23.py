@@ -19,23 +19,21 @@ def isAbundant(n):
 	# print sum
 
 def sum_numbers_cannot_written_as_sum_of_2_abundants():
-	sum = 0
-	for i in range(1, LIMIT):
-		j = 12
-		while j < (i/2 + 1):
+	sum = (LIMIT * (LIMIT + 1) ) / 2
+	
+	for i in range(1, LIMIT + 1):
+		for j in range(1, i/2 + 1):
 			n1 = j
 			n2 = i - j
 			if (n1 in abundants) and (n2 in abundants):
 				# print i, n1, n2
+				sum = sum - i;
 				break
-			j += 1
-		if j != i/2:
-			# print i
-			sum += i
+
 	print sum			
 
 def main():
-	for i in range(12, (LIMIT/2 + 1)):
+	for i in range(12, ((LIMIT/2) + 1)):
 		if isAbundant(i):
 			abundants[i] = i
 	# print abundants		
