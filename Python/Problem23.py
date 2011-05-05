@@ -33,7 +33,7 @@ def sum_numbers_cannot_written_as_sum_of_2_abundants():
 	print sum			
 
 def main():
-	for i in range(12, ((LIMIT/2) + 1)):
+	for i in range(12, LIMIT):
 		if isAbundant(i):
 			abundants[i] = i
 	# print abundants		
