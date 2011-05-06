@@ -1,3 +1,4 @@
+from time import *
 from collections import defaultdict
 """
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
@@ -33,11 +34,14 @@ def sum_numbers_cannot_written_as_sum_of_2_abundants():
 	print sum			
 
 def main():
+	time_taken = clock()
+	
 	for i in range(12, LIMIT):
 		if isAbundant(i):
 			abundants[i] = i
 	# print abundants		
 	sum_numbers_cannot_written_as_sum_of_2_abundants()
-
+	print "Time taken = %.2f" % (clock() - time_taken)
+	
 if __name__ == "__main__":
     main()
