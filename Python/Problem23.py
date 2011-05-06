@@ -1,12 +1,9 @@
 from collections import defaultdict
 """
+It can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 """
 abundants = defaultdict(int)
-
-"""
-It can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. 
-"""
 LIMIT = 28123
 
 def isAbundant(n):
