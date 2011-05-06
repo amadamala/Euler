@@ -1,23 +1,27 @@
-from collections import defaultdict
 """
-It can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
+It can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. 
 """
+
+from time import *
+from collections import defaultdict
+
 abundants = defaultdict(int)
-LIMIT = 28123
+LIMIT = 1000
 
 def isAbundant(n):
 	sum = 0
 	for i in range(1, n/2 + 1):
 		if n % i == 0:
 			sum += i
+	print n, sum		
 	if sum > n :
 		return True
-	# print sum
+
 
 def sum_numbers_cannot_written_as_sum_of_2_abundants():
 	sum = (LIMIT * (LIMIT + 1) ) / 2
-	
+
 	for i in range(1, LIMIT + 1):
 		for j in range(1, i/2 + 1):
 			n1 = j
@@ -30,9 +34,11 @@ def sum_numbers_cannot_written_as_sum_of_2_abundants():
 	print sum			
 
 def main():
+	time_taken = clock()
 	for i in range(12, LIMIT):
 		if isAbundant(i):
 			abundants[i] = i
+	print "Time taken = %.2f" % (clock() - time_taken)		
 	# print abundants		
 	sum_numbers_cannot_written_as_sum_of_2_abundants()
 
