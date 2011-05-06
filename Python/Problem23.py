@@ -9,16 +9,6 @@ from collections import defaultdict
 LIMIT = 28123
 abundants = [None] * LIMIT
 
-
-# def isAbundant(n):
-# 	sum = 0
-# 	for i in range(1, n/2 + 1):
-# 		if n % i == 0:
-# 			sum += i
-# 	# print n, sum		
-# 	if sum > n :
-# 		return True
-
 def d(n):
 	for i in range(1, n + 1):
 		j = 2
@@ -28,8 +18,6 @@ def d(n):
 			else:
 				abundants[i * j] += i
 			j += 1
-	# for i in range(len(abundants)):
-	# 	print i, abundants[i]
 
 def sum_numbers_cannot_written_as_sum_of_2_abundants():
 	sum = (LIMIT * (LIMIT + 1) ) / 2
@@ -39,7 +27,6 @@ def sum_numbers_cannot_written_as_sum_of_2_abundants():
 			n1 = j
 			n2 = i - j
 			if (n1 < abundants[n1]) and (n2 < abundants[n2]):
-				# print i, n1, n2
 				sum = sum - i;
 				break
 
@@ -47,10 +34,7 @@ def sum_numbers_cannot_written_as_sum_of_2_abundants():
 
 def main():
 	time_taken = clock()
-	d(LIMIT)
-	# time_taken = clock() - time_taken
-	# print "Time taken = %.2f" % (clock() - time_taken)		
-	# print abundants		
+	d(LIMIT)		
 	sum_numbers_cannot_written_as_sum_of_2_abundants()
 	print "Time taken = %.2f" % (clock() - time_taken)		
 
