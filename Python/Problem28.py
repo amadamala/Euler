@@ -10,5 +10,14 @@
 # 
 # What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 
-print (1 + sum(x for x in list(4 * (2 * i+ 1)**2  - 12 * i  for i in range(1, (1001 + 1)/2) )))
+def spiral_sum(N):
+	s = 1 + sum(x for x in list(4 * (2 * i+ 1)**2  - 12 * i  for i in range(1, (N + 1)/2) ))
+	return s
 
+def spiral_sum_readable(N):
+	sum = 1;   # for spiral 1, 1 is the only element 
+	for i in range(1, (N + 1)/2):
+		sum = sum + 4 * (2 * i + 1)**2 - 12 * i 
+	return sum
+print "One liner ::", solution(1001)
+print "Readable solution:: ", sol(1001)
