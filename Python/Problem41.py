@@ -25,7 +25,7 @@ def perm(prefix , s):
                # perm1(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1, N));
 				
 def foo(n):
-	for i in range(n):
+	for i in range(n, 1, -1):
 		if isprime(i) and ispandigital(i):
 			print i
 
@@ -40,10 +40,11 @@ def ispandigital(n):
 
 def main():
 	t = clock()
-	foo(10000)
+	foo(1234567)
 	print "Time taken: %0.2f" %(clock() - t)
 	
 	t = clock()
+	
 	perm("", '1234567')
 	print "Time taken: %0.2f" %(clock() - t)
 	
