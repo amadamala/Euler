@@ -4,7 +4,7 @@
 Problem30.py
 
 Created by amadamala on 2011-05-12.
-Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+Copyright (c) 2011 __amadamala__. All rights reserved.
 """
 
 import sys
