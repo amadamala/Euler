@@ -17,7 +17,7 @@ Find the sum of all the numbers that can be written as the sum of fifth powers
 of their digits.
 
 
-Created by amadamala on 2011-05-12.
+Created by amadamala on 2011-05-12.˝
 Copyright (c) 2011 __amadamala__. All rights reserved.
 """
 
