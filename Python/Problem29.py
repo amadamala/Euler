@@ -20,9 +20,4 @@ Created by amadamala on 2011-05-12.
 Copyright (c) 2011 __Anil Madamala__. All rights reserved.           
 """
 print len(set((i ** j  for i in range(2, 100+1) for j in range(2, 100+1))))
-
-# for i in range(a, b + 1):
-# 	for j in range(a, b + 1):
-# 		if not (i ** j) in d:
-# 			d[i ** j] = 1
 				
