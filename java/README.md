@@ -1,1 +1,0 @@
-Java solutions to the problems at [Projecteuler.net](http://projecteuler.net/ "euler")
