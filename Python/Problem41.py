@@ -26,10 +26,10 @@ def perm(s, prefix = ""):
 			perm((s[0:i] + s[i+1:N]), (prefix + s[i]))
 			
 def ispandigital(n):
-	l = list(str(n))
-	l.sort()
-	for i in range(len(l)):
-		if (i+1) != int(l[i]):
+	list_ = list(str(n))
+	list_.sort()
+	for i in range(len(list_)):
+		if (i+1) != int(list_[i]):
 			return False
 	return True
 
